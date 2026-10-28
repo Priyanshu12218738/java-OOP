@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Car car1 = new Car(new PetrolEngine());
-        Car car2 = new Car(new DieselEngine());
+        Car dieselCar = new Car(new DieselEngine());
+        Car electricCar = new Car(new ElectricEngine());
 
-        car1.startCar();
-        car2.startCar();
+        dieselCar.startCar();
+        electricCar.startCar();
     }
 }
