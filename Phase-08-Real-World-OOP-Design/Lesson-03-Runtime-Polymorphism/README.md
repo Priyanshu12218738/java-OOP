@@ -1,37 +1,73 @@
-# Phase 8 — Lesson 3: Runtime Polymorphism in the Car System
+# Phase 8 — Lesson 3: Polymorphism in the Car System
 
-## Why Runtime Polymorphism?
+## 1. Why Do We Need Polymorphism?
 
-A car company may use a petrol engine today, a diesel engine tomorrow, and add an electric engine later. Creating a separate `Car` class for every engine type would duplicate code and make the system harder to maintain.
+Imagine supporting petrol, diesel, and electric cars. Creating separate `PetrolCar`, `DieselCar`, and `ElectricCar` classes with duplicate `startCar()` logic would make the system harder to maintain.
 
-Instead, `Car` depends on the `Engine` interface. Each engine supplies its own implementation of `start()`.
-
-## Example
-
-See [Main.java](Main.java), [Engine.java](Engine.java), [PetrolEngine.java](PetrolEngine.java), [DieselEngine.java](DieselEngine.java), and [Car.java](Car.java).
-
-Expected output:
+Instead, `Car` works with the common `Engine` abstraction and delegates engine behavior through it.
 
 ```text
-Petrol engine started
-Diesel engine started
+Car
+ └── calls engine.start()
+       └── Engine interface reference
+             ├── PetrolEngine → petrol message
+             ├── DieselEngine → diesel message
+             └── ElectricEngine → electric message
 ```
 
-## What Happens at Runtime?
+## 2. How Runtime Polymorphism Works
 
-- `Engine engine` uses the interface as the reference type.
-- The actual object may be a `PetrolEngine` or `DieselEngine`.
-- When `engine.start()` is called, Java executes the overridden implementation for the actual object.
+The interface defines the common contract:
 
-This is **runtime polymorphism**: the implementation selected for the method call depends on the object's runtime type.
+```java
+public interface Engine {
+    void start();
+    void stop();
+}
+```
 
-## Interview Distinctions
+The `Car` constructor accepts an `Engine`:
 
-- **Abstraction:** `Engine` declares what an engine can do without specifying how each engine does it.
-- **Polymorphism:** The same `engine.start()` call can execute different implementations.
-- **Dependency Injection (DI):** The engine is supplied to `Car` through its constructor.
-- **Dependency Inversion Principle (DIP):** `Car` depends on the `Engine` abstraction rather than directly on `PetrolEngine` or `DieselEngine`.
+```java
+public Car(Engine engine) {
+    this.engine = engine;
+}
+```
+
+Now the same `Car` class can work with different implementations:
+
+```java
+Car dieselCar = new Car(new DieselEngine());
+Car electricCar = new Car(new ElectricEngine());
+
+dieselCar.startCar();
+electricCar.startCar();
+```
+
+When `dieselCar.startCar()` runs, the diesel engine's `start()` implementation executes. When `electricCar.startCar()` runs, the electric engine's implementation executes, assuming both classes implement `Engine` correctly.
+
+## 3. Compile-Time Type vs. Runtime Object
+
+```java
+Engine engine = new DieselEngine();
+engine.start();
+```
+
+- **Compile-time reference type:** `Engine` — determines which members can be accessed through the reference.
+- **Runtime object:** `new DieselEngine()` — the actual object assigned to the reference.
+- **Method dispatch:** Java invokes the overridden `start()` implementation belonging to the runtime object.
+
+This is **runtime polymorphism**. The concrete class must implement `Engine` and provide the required `start()` method.
+
+## Example Files
+
+- [Engine.java](Engine.java)
+- [PetrolEngine.java](PetrolEngine.java)
+- [DieselEngine.java](DieselEngine.java)
+- [ElectricEngine.java](ElectricEngine.java)
+- [Car.java](Car.java)
+- [Main.java](Main.java)
 
 ## Key Takeaway
 
-Add another engine implementation without changing the `Car` class, provided the new engine implements the `Engine` interface.
+Program against the `Engine` interface, not a specific engine class. Adding another engine implementation should not require a new `Car` class.
