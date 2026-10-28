@@ -8,4 +8,8 @@ public class Car {
     public void startCar() {
         engine.start();
     }
+
+    public void stopCar() {
+        engine.stop();
+    }
 }
