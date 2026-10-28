@@ -3,4 +3,9 @@ public class DieselEngine implements Engine {
     public void start() {
         System.out.println("Diesel engine started");
     }
+
+    @Override
+    public void stop() {
+        System.out.println("Diesel engine stopped");
+    }
 }
