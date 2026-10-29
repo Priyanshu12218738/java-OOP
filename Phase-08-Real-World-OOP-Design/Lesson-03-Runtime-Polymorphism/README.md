@@ -71,3 +71,86 @@ This is **runtime polymorphism**. The concrete class must implement `Engine` and
 ## Key Takeaway
 
 Program against the `Engine` interface, not a specific engine class. Adding another engine implementation should not require a new `Car` class.
+
+
+## Earlier Theory — Runtime Polymorphism (Retained)
+
+### Why Do We Need Runtime Polymorphism?
+
+A car company may use a petrol engine today, a diesel engine tomorrow, and introduce an electric engine in the future. If every engine type required its own `Car` class, the same car-control logic would be duplicated and become harder to maintain.
+
+The solution is to make `Car` depend on the `Engine` interface rather than a concrete engine class.
+
+### Code Walkthrough
+
+```java
+public interface Engine {
+    void start();
+    void stop();
+}
+
+public class PetrolEngine implements Engine {
+    @Override
+    public void start() {
+        System.out.println("Petrol engine started");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Petrol engine stopped");
+    }
+}
+
+public class DieselEngine implements Engine {
+    @Override
+    public void start() {
+        System.out.println("Diesel engine started");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Diesel engine stopped");
+    }
+}
+
+public class Car {
+    private final Engine engine;
+
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+
+    public void startCar() {
+        engine.start();
+    }
+
+    public void stopCar() {
+        engine.stop();
+    }
+}
+```
+
+The same `Car` class can be used with either engine:
+
+```java
+Car car1 = new Car(new PetrolEngine());
+Car car2 = new Car(new DieselEngine());
+
+car1.startCar();
+car2.startCar();
+```
+
+### What Happens Internally?
+
+- `Engine engine` is a reference whose compile-time type is the `Engine` interface.
+- The actual object may be `PetrolEngine`, `DieselEngine`, or another implementation.
+- When `engine.start()` executes, Java dispatches the call to the implementation belonging to the actual runtime object.
+
+### Interview Concepts
+
+- **Abstraction:** The `Engine` interface defines what an engine can do, without specifying how each engine performs the operation.
+- **Polymorphism:** The same method call can execute different implementations.
+- **Dependency Injection (DI):** The engine is passed into `Car` through its constructor.
+- **Dependency Inversion Principle (DIP):** `Car` depends on the `Engine` abstraction rather than concrete engine classes.
+
+These earlier explanations are preserved alongside the expanded lesson material above.
