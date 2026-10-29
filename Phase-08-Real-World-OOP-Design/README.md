@@ -8,5 +8,6 @@
 4. [Lesson 4 — Encapsulation, State Management, and Validation](Lesson-04-Encapsulation-State-Validation/README.md)
 5. [Lesson 4 — Validation and Error Handling](Lesson-04-Validation-Error-Handling/README.md)
 6. [Lesson 5 — Exception Handling](Lesson-05-Exception-Handling/README.md)
+7. [Lesson 6 — Car System Class Design Review](Lesson-06-Car-System-Class-Design-Review/README.md)
 
-Note: Two supplied lessons were labeled Lesson 4; both are retained as separate topics.
+Note: Two submitted topics were labeled Lesson 4; both have been retained separately.
