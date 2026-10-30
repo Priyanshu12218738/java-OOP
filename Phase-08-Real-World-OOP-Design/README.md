@@ -9,5 +9,6 @@
 5. [Lesson 4 — Validation and Error Handling](Lesson-04-Validation-Error-Handling/README.md)
 6. [Lesson 5 — Exception Handling](Lesson-05-Exception-Handling/README.md)
 7. [Lesson 6 — Car System Class Design Review](Lesson-06-Car-System-Class-Design-Review/README.md)
+8. [Lesson 7 — Console-Based Car System](Lesson-07-Console-Based-Car-System/README.md)
 
 Note: Two submitted topics were labeled Lesson 4; both have been retained separately.
