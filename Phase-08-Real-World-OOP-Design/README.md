@@ -15,3 +15,7 @@
 11. [Lesson 10 — Handle Invalid Inputs and Exceptions](Lesson-10-Invalid-Inputs-and-Exceptions/README.md)
 
 Note: Two submitted topics were labeled Lesson 4; both have been retained separately.
+
+## Progress Tracking
+
+See the [Phase 08 progress snapshot](../progress/phases/PHASE-08.md) and [weekly progress reports](../progress/weekly/README.md).
