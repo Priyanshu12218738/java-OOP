@@ -8,7 +8,7 @@
 
 The main focus was **Phase 08 — Real-World OOP Design**, extending the Car System from engine lifecycle and object design into a console-driven application.
 
-- Added or refined material for Lessons 3–10.
+- Updated Lesson 3 Runtime Polymorphism and the Lesson 4 validation example; added the Lesson 6 class-design review and Lessons 7–10 material. Earlier lesson folders remain part of the existing Phase 08 baseline.
 - Retained the earlier Runtime Polymorphism theory in Lesson 3 instead of replacing it.
 - Added a class-design review with Petrol, Diesel, and Electric engine implementations.
 - Added a console application starter and milestone for Lesson 7.
