@@ -1,10 +1,13 @@
-# Phase Reports
+# Phase Reports and Progress Snapshots
 
-Each completed phase will have a summary covering:
+- [Phase 08 — Real-World OOP Design](PHASE-08.md): active phase snapshot and next milestones.
+
+Phase summaries cover:
 - Topics completed
-- Problems solved
+- Problems and coding tasks
 - Programs written
 - Important concepts
 - Common mistakes and fixes
 - Practical work / mini-projects
-- Final status
+- Test evidence
+- Final or current phase status
