@@ -13,6 +13,7 @@
 9. [Lesson 8 — Engine Selection + Dependency Injection](Lesson-08-Engine-Selection-Dependency-Injection/README.md)
 10. [Lesson 9 — Connect Start/Stop Menu with Selected Engine](Lesson-09-Connect-Menu-With-Selected-Engine/README.md)
 11. [Lesson 10 — Handle Invalid Inputs and Exceptions](Lesson-10-Invalid-Inputs-and-Exceptions/README.md)
+12. [Lesson 11 — Engine State Management & Edge Cases](Lesson-11-Engine-State-Management-Edge-Cases/README.md)
 
 Note: Two submitted topics were labeled Lesson 4; both have been retained separately.
 
