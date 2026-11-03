@@ -15,6 +15,7 @@
 11. [Lesson 10 — Handle Invalid Inputs and Exceptions](Lesson-10-Invalid-Inputs-and-Exceptions/README.md)
 12. [Lesson 11 — Engine State Management & Edge Cases](Lesson-11-Engine-State-Management-Edge-Cases/README.md)
 13. [Lesson 12 — Refactor Car System Using SOLID Principles](Lesson-12-SOLID-Principles-Refactoring/README.md)
+13. [Lesson 13 — UML Class Diagram & Object Relationships](Lesson-13-UML-Class-Diagram-Object-Relationships/README.md)
 14. [Lesson 14 — Complete Car System Integration](Lesson-14-Complete-Car-System-Integration/README.md)
 15. [Lesson 15 — Answer Review](Lesson-15-Answer-Review/README.md)
 16. [Lesson 16 — Final Project Review](Lesson-16-Final-Project-Review/README.md)
