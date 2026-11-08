@@ -56,7 +56,7 @@ classDiagram
     Engine <|.. DieselEngine : implements
     Engine <|.. PetrolEngine : implements
     Engine <|.. ElectricEngine : implements
-    Car o--> Engine : has-a
+    Car --> Engine : has-a
 ```
 
 **Notation note:** The diagram is conceptual and focuses on the design relationships. The Engine interface is implemented by the three concrete engine classes. Car holds an Engine reference supplied through its constructor. The association shown from Car to Engine represents the HAS-A relationship; strict UML composition is normally shown with a filled diamond and implies stronger lifecycle ownership.
