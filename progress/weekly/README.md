@@ -3,6 +3,7 @@
 ## Reports
 
 - [Week 01 — 26 October to 1 November 2026](Week-01.md)
+- [Week 02 — 2 to 8 November 2026](Week-02.md)
 
 Each weekly report records:
 - Topics completed
