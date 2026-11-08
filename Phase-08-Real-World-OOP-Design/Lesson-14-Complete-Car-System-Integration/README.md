@@ -203,7 +203,7 @@ public class Main {
 
         while (!exit) {
 
-            System.out.println("\\n1. Start Car");
+            System.out.println("\n1. Start Car");
             System.out.println("2. Stop Car");
             System.out.println("3. Exit");
 
@@ -240,7 +240,7 @@ public class Main {
 | Encapsulation | Private `running` state inside each engine implementation. |
 | Abstraction | Engine interface defines the common contract. |
 | Polymorphism | Different Engine implementations can be referenced through Engine. |
-| Composition | Car HAS-A Engine reference. |
+| Association / HAS-A | Car holds an Engine reference and delegates operations to it; strict composition implies lifecycle ownership. |
 | Constructor Dependency Injection | `Car(Engine engine)` receives its dependency. |
 | DIP | Car depends on the Engine interface, not a concrete engine. |
 | OCP | New engine implementations can be added without changing Car, provided they follow the Engine contract. |
