@@ -18,7 +18,7 @@ The project is developed incrementally, following the same lesson-driven approac
 | Project phase | Focus | Status |
 |---|---|---|
 | Phase 1 | Requirement Analysis & Design | ✅ Complete (100%, as recorded in the learning conversation) |
-| Phase 2 | Employee Management | 🔜 Next — implementation to begin |
+| [Phase 2](Phase-02-Employee-Management/Lesson-01-Employee-Class-Encapsulation/README.md) | Employee Management | 🔄 In Progress — Lesson 1 created |
 | Phase 3 | Employee Types | ⬜ Not started |
 | Phase 4 | Salary Calculation | ⬜ Not started |
 | Phase 5 | Attendance Management | ⬜ Not started |
@@ -115,7 +115,7 @@ Planned topics:
 - Constructors, getters, and setters.
 - Add, update, delete, and search employee records.
 
-**Progress:** Not started in the supplied learning record. Begin with the Employee model and its validation rules; keep implementation work and test evidence in this repository as it is completed.
+**Progress:** Lesson 1 created; coding and review are pending.\n\n### Lessons\n\n| Lesson | Topic | Status |\n|---|---|---|\n| [Lesson 1 — Employee Class & Encapsulation](Phase-02-Employee-Management/Lesson-01-Employee-Class-Encapsulation/README.md) | Employee model, private fields, constructor, getters, setters, basic validation | 🔄 In Progress
 
 ## Remaining Project Roadmap
 
