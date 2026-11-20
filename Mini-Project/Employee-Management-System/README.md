@@ -5,7 +5,6 @@
 **Design focus:** OOP, SOLID, Low Coupling, High Cohesion
 
 ## Objective
-
 Build an Employee Management System that manages employee records, salary calculation, attendance, notifications, monthly payroll, and reports.
 
 ## Project Modules
@@ -24,9 +23,9 @@ Build an Employee Management System that manages employee records, salary calcul
 | Phase | Name | Lessons | Status |
 |---|---|---:|---|
 | [Phase 1](Phase-01-Requirement-Analysis-and-Design/README.md) | Requirement Analysis & Design | 5 + Final Design Review | ✅ Complete |
-| [Phase 2](Phase-02-Employee-Management/README.md) | Employee Management | To be developed | 🔄 In Progress |
-| Phase 3 | Employee Types | Planned | ⬜ Not Started |
-| Phase 4 | Salary Calculation | Planned | ⬜ Not Started |
+| [Phase 2](Phase-02-Employee-Management/README.md) | Employee Management | 6 | ✅ Complete |
+| [Phase 3](Phase-03-Employee-Types/README.md) | Employee Types | 8 | ✅ Complete — follow-up fixes noted |
+| [Phase 4](Phase-04-Salary-Calculation-Design/README.md) | Salary Calculation Design | 3 | 🔄 In Progress |
 | Phase 5 | Attendance Management | Planned | ⬜ Not Started |
 | Phase 6 | Notification System | Planned | ⬜ Not Started |
 | Phase 7 | Payroll Management | Planned | ⬜ Not Started |
