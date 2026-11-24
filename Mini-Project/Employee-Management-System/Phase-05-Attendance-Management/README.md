@@ -1,22 +1,30 @@
 # Phase 5 — Attendance Management
 
-**Status:** ✅ Complete
+**Status:** 🟡 Core attendance workflow complete; ISP extension pending
 
 ## Phase Goal
-Design and implement attendance records independently from employee profile data, validate uniqueness, display attendance, and calculate summaries.
+Maintain employee attendance records for present, absent, and leave statuses, then expose focused attendance operations through suitable abstractions.
 
 ## Lesson Index
 | Lesson | Topic | Details | Status |
 |---|---|---|---|
-| [Lesson 1 — Attendance Design](Lesson-01-Attendance-Design/README.md) | Class responsibilities | Separate Attendance and AttendanceService from Employee responsibilities. | ✅ Design reviewed — 9/10 |
-| [Lesson 2 — Attendance Model](Lesson-02-Attendance-Model/README.md) | LocalDate, enum, and validation | Model employee ID, date, and PRESENT/ABSENT status with constructor validation. | 🟡 Design explained; implementation not evidenced |
-| [Lesson 3 — AttendanceService Structure](Lesson-03-AttendanceService-Structure/README.md) | List<Attendance> and ArrayList | Encapsulate attendance records in a service. | ✅ Concept passed — 10/10 |
-| [Lesson 4 — Duplicate Attendance Validation](Lesson-04-Duplicate-Attendance-Validation/README.md) | Employee/date uniqueness | Reject a duplicate when employee ID and LocalDate both match. | ✅ Logic passed — 10/10 |
-| [Lesson 5 — Display Attendance](Lesson-05-Display-Attendance/README.md) | Filter records by employee ID | Display matching records and handle the no-records case. | 🟡 Solution walkthrough |
-| [Lesson 6 — Attendance Summary](Lesson-06-Attendance-Summary/README.md) | Present, absent, and total counts | Count attendance records for one employee. | 🟡 Solution walkthrough |
-| [Lesson 7 — Main Integration](Lesson-07-Main-Integration/README.md) | Connect service and application | Integrate attendance creation and summary output; review design principles. | ✅ Output passed |
+| [Lesson 1 — Attendance Design](Lesson-01-Attendance-Design/README.md) | Attendance responsibilities | Keep attendance records separate from Employee profile responsibilities. | ✅ Design reviewed — 9/10 |
+| [Lesson 2 — Attendance Model](Lesson-02-Attendance-Model/README.md) | Attendance records and status | Model employee ID, LocalDate, and PRESENT/ABSENT/LEAVE status with validation. | 🟡 LEAVE extension added; implementation pending |
+| [Lesson 3 — AttendanceService Structure](Lesson-03-AttendanceService-Structure/README.md) | Attendance collection/service | Encapsulate records in List<Attendance> and manage them through AttendanceService. | ✅ Concept passed — 10/10 |
+| [Lesson 4 — Duplicate Attendance Validation](Lesson-04-Duplicate-Attendance-Validation/README.md) | Duplicate prevention | Enforce one record per employee per date. | ✅ Logic passed — 10/10 |
+| [Lesson 5 — Display Attendance](Lesson-05-Display-Attendance/README.md) | Display records | Filter attendance by employee ID and handle no-record cases. | 🟡 Solution walkthrough |
+| [Lesson 6 — Attendance Summary](Lesson-06-Attendance-Summary/README.md) | Present, absent, and leave summary | Count each supported status and total recorded days. | 🟡 Existing walkthrough covers present/absent; LEAVE extension pending |
+| [Lesson 7 — Main Integration](Lesson-07-Main-Integration/README.md) | Attendance integration | Connect model and service and display an employee attendance summary. | ✅ Output passed |
+| [Lesson 8 — Attendance Interface & ISP](Lesson-08-Attendance-Interface-and-ISP/README.md) | Attendance interfaces and ISP | Define a focused interface for a real client requirement; avoid unused methods. | 🔄 Planned |
 
-## Integration Evidence
+## Core Topics
+- Attendance records using LocalDate.
+- PRESENT, ABSENT, and planned LEAVE status.
+- Duplicate validation using employee ID + date.
+- Display and summary operations.
+- Attendance interface design and Interface Segregation Principle.
+
+## Existing Integration Evidence
 ```text
 Employee ID: 101
 Present Days: 2
@@ -24,15 +32,13 @@ Absent Days: 1
 Total Days: 3
 ```
 
-## Final Design Review
-- **SRP:** Employee, Attendance, and AttendanceService have separate responsibilities.
-- **OCP:** LEAVE can be considered as a future status extension.
-- **LSP:** no inheritance-based substitution issue is present in the current design.
-- **ISP:** the current service API was considered focused.
-- **DIP:** depending directly on concrete Attendance is a possible future improvement.
+## Final Design Notes
+The original phase review recorded SRP as satisfied and identified a focused service API. The new interface/ISP exercise is an additional requirement and has not yet been implemented.
 
-## Completion Evidence
-The source export explicitly marks Phase 5 complete. Integration output is confirmed, but independent implementation evidence is not available for every model/service method.
+## Remaining Work
+- Add LEAVE to AttendanceStatus and validate it.
+- Update summary logic to count leave days separately.
+- Design and implement a focused attendance interface.
+- Demonstrate ISP with a client that depends only on the operations it needs.
 
-## Next
-Proceed to [Phase 6 — Notification System](../Phase-06-Notification-System/README.md).
+The earlier attendance workflow was declared complete in the source conversation; the expanded LEAVE and ISP requirements are tracked as pending additions.
