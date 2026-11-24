@@ -13,14 +13,13 @@ Mini Project (Module)
 
 ## Progress
 
-| Phase | Status | Topics | Problems | Programs | Mini Project |
-|---|---|---:|---:|---:|---|
-| Phase 01 — Java OOP | 🔄 In Progress | 0 | 0 | 0 | — |
-| [Phase 08 — Real-World OOP Design](Phase-08-Real-World-OOP-Design/README.md) | 🔄 In Progress | 17 lesson entries (Lessons 1–16; duplicate Lesson 4 retained) | 5 task documents (completion evidence incomplete) | 36 Java source files | Car System — integration documented; runnable implementation/testing pending |
-| [Phase 10 — Java LLD & Design Patterns](Phase-10-Java-LLD-Design-Patterns/README.md) | 🔄 In Progress | 47 lessons/projects | 2 sections marked complete | — | LLD learning module |
-| [Mini Projects](Mini-Project/README.md) | 🔄 In Progress | Employee Management System — Phases 1–3 complete; Phase 4 in progress | See project lesson trackers | — | Employee Management System |
+| Track | Status | Details |
+|---|---|---|
+| Phase 08 — Real-World OOP Design | 🔄 In Progress | 17 lesson entries (Lessons 1–16; duplicate Lesson 4 retained) |
+| Phase 10 — Java LLD & Design Patterns | 🔄 In Progress | 47 lessons/projects; first 2 sections marked complete |
+| [Mini Projects](Mini-Project/README.md) | 🔄 In Progress | Employee Management System: Phases 1–6 complete; Phase 7 in progress |
 
-> Completion is based on submitted evidence in the learning conversations. A concept review, code review, console output, and full runtime test are tracked distinctly.
+> Completion is based on evidence in learning conversations. Concept checks, code reviews, integration output, and complete runtime tests are tracked separately.
 
 ## Weekly Progress
 
