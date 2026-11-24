@@ -1,22 +1,13 @@
 # Phase 4 — Salary Calculation Design
 
-**Status:** 🔄 In Progress
-
-## Goal
-Separate salary-calculation coordination from employee management while retaining polymorphic salary behaviour.
-
-## Lesson Index
+**Status:** ✅ Complete
 
 | Lesson | Topic | Status |
 |---|---|---|
-| [Lesson 1 — Salary Requirements & SRP](Lesson-01-Salary-Requirements-and-SRP/README.md) | Separate employee management and salary responsibilities | ✅ Concept check passed |
-| [Lesson 2 — SalaryCalculator Design](Lesson-02-SalaryCalculator-Design/README.md) | Delegate calculation through Employee.calculateSalary() | ✅ Passed (9/10) |
-| [Lesson 3 — Main.java Integration](Lesson-03-Main-Integration/README.md) | Test SalaryCalculator with all employee types | 🔄 Task pending |
+| 1 | Salary requirements and SRP separation | ✅ Concept passed |
+| 2 | SalaryCalculator integration for Permanent, Contract, Intern | ✅ Expected salary output documented |
+| 3 | Null validation and SalaryCalculator design review | ✅ Design reviewed |
+| 4 | FreelanceEmployee and OCP challenge | ✅ Passed — 10/10 |
 
-## Remaining work
-- Complete Main.java integration for permanent, contract, and intern employees.
-- Submit console output for review.
-- Add null validation to SalaryCalculator.
-- Complete the Phase 4 final design review.
-
-The uploaded conversation ends at the Lesson 3 coding task; these items are not marked complete.
+## Key outcomes
+SalaryCalculator delegates through the Employee abstraction, rejects null employees with IllegalArgumentException, and requires no modification when FreelanceEmployee is added. The recorded freelance result is 20000.0 (500 × 40). The uploaded conversation explicitly marks Phase 4 complete.
